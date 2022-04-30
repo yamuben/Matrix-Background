@@ -7,7 +7,7 @@ canvas.height = window.innerHeight;
 const katakana =
   "アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン";
 const latin = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const nums = "0X";
+const nums = "01";
 
 const alphabet = nums;
 
@@ -30,7 +30,13 @@ const draw = () => {
     context.font = Math.floor(Math.random() * fontSize) + "px monospace";
     const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
     for (let j = 0; j <= i; j++) {
-      context.fillText(text, rainDrops[i] * fontSize > canvas.width? (rainDrops[i] * fontSize)/2:(rainDrops[i] * fontSize), i * fontSize);
+      context.fillText(
+        text,
+        i * fontSize,
+        rainDrops[i] * fontSize > canvas.width
+          ? (rainDrops[i] * fontSize) / 2
+          : rainDrops[i] * fontSize
+      );
     }
 
     if (rainDrops[i] * fontSize > canvas.width && Math.random() > 0.575) {
