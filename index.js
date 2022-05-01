@@ -40,7 +40,7 @@ setInterval(draw, 100);
 
 
 const fontSize20 = 25;
-const columns20 = canvas.width / fontSize20;
+const columns20 = canvas.height / fontSize20;
 
 const rainDrops20 = [];
 
@@ -70,7 +70,7 @@ setInterval(draw20, 450);
 
 
 const fontSize50 = 70;
-const columns50 = canvas.width / fontSize50;
+const columns50 = canvas.height / fontSize50;
 
 const rainDrops50 = [];
 
@@ -100,7 +100,7 @@ setInterval(draw50, 700);
 
 
 const fontSize35 = 35;
-const columns35 = canvas.width / fontSize35;
+const columns35 = canvas.height / fontSize35;
 
 const rainDrops35 = [];
 
