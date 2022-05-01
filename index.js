@@ -8,7 +8,7 @@ const nums = "01";
 const alphabet = nums;
 
 const fontSize = 10;
-const columns = canvas.width / fontSize;
+const columns = canvas.height / fontSize;
 
 const rainDrops = [];
 
@@ -18,7 +18,7 @@ for (let x = 0; x < columns; x++) {
 
 const draw = () => {
   context.fillStyle = "rgba(0, 0, 0, 0.05)";
-  context.fillRect(0, 0, canvas.width, canvas.height);
+  context.fillRect(0, 0, canvas.width, (canvas.height)*10);
 
   context.fillStyle = "#0F0";
   context.font = fontSize + "px monospace";
